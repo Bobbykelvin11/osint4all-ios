@@ -834,7 +834,7 @@
         },
         {
           "id": "file-upload::2::https://disroot.org/en/services/upload",
-          "name": "Upload \\| Disroot",
+          "name": "Upload | Disroot",
           "url": "https://disroot.org/en/services/upload",
           "domain": "disroot.org",
           "note": null
@@ -1794,7 +1794,7 @@
         },
         {
           "id": "resources::29::https://booleanstrings.com/tools/",
-          "name": "Boolean Strings \\| Tools",
+          "name": "Boolean Strings | Tools",
           "url": "https://booleanstrings.com/tools/",
           "domain": "booleanstrings.com",
           "note": null
@@ -6716,7 +6716,7 @@
         },
         {
           "id": "source-codes::12::https://webfinery.com/search",
-          "name": "Webfinery \\| Source Code Search",
+          "name": "Webfinery | Source Code Search",
           "url": "https://webfinery.com/search",
           "domain": "webfinery.com",
           "note": null
@@ -7398,7 +7398,7 @@
         },
         {
           "id": "iot::13::https://www.iplivecams.com/live-cams/",
-          "name": "Live Cams \\| Iplivecams",
+          "name": "Live Cams | Iplivecams",
           "url": "https://www.iplivecams.com/live-cams/",
           "domain": "iplivecams.com",
           "note": null
@@ -7519,7 +7519,7 @@
     },
     {
       "id": "can-iot",
-      "name": "\\[CAN\\] IOT",
+      "name": "[CAN] IOT",
       "tools": [
         {
           "id": "can-iot::0::https://511on.ca/",
@@ -7863,7 +7863,7 @@
         },
         {
           "id": "maps::13::https://livingatlas.arcgis.com/en/browse/",
-          "name": "Living Atlas of the World \\| ArcGIS",
+          "name": "Living Atlas of the World | ArcGIS",
           "url": "https://livingatlas.arcgis.com/en/browse/",
           "domain": "livingatlas.arcgis.com",
           "note": null
@@ -8413,7 +8413,7 @@
         },
         {
           "id": "darknet::14::https://learnmeabitcoin.com/tools/path/",
-          "name": "Tool \\| path",
+          "name": "Tool | path",
           "url": "https://learnmeabitcoin.com/tools/path/",
           "domain": "learnmeabitcoin.com",
           "note": null
@@ -8565,7 +8565,7 @@
       "tools": [
         {
           "id": "voter-databases::0::https://booleanstrings.com/2021/07/15/search-for-us-voters-with-custom-search-engines-osint/",
-          "name": "Search for US Voters with Custom Search Engines #OSINT \\| Boolean Strings",
+          "name": "Search for US Voters with Custom Search Engines #OSINT | Boolean Strings",
           "url": "https://booleanstrings.com/2021/07/15/search-for-us-voters-with-custom-search-engines-osint/",
           "domain": "booleanstrings.com",
           "note": null
@@ -8697,7 +8697,7 @@
         },
         {
           "id": "extremist-far-right::1::https://search.ddosecrets.com/data/",
-          "name": "Data \\| DDoSecrets Search",
+          "name": "Data | DDoSecrets Search",
           "url": "https://search.ddosecrets.com/data/",
           "domain": "search.ddosecrets.com",
           "note": null
@@ -9415,7 +9415,7 @@
         },
         {
           "id": "police-le-fed::36::https://projects.thetrace.org/inspections/",
-          "name": "Gun Dealer Inspections \\| The Trace",
+          "name": "Gun Dealer Inspections | The Trace",
           "url": "https://projects.thetrace.org/inspections/",
           "domain": "projects.thetrace.org",
           "note": null
@@ -9473,7 +9473,7 @@
     },
     {
       "id": "can-police",
-      "name": "\\[CAN\\] POLICE",
+      "name": "[CAN] POLICE",
       "tools": [
         {
           "id": "can-police::0::https://www.policemisconductdatabase.ca/database/",
@@ -10005,7 +10005,7 @@
         },
         {
           "id": "public-records::44::https://www.ancestry.com/search/collections/1265/",
-          "name": "Yearbooks \\| High School Yearbooks \\| Ancestry",
+          "name": "Yearbooks | High School Yearbooks | Ancestry",
           "url": "https://www.ancestry.com/search/collections/1265/",
           "domain": "ancestry.com",
           "note": null
@@ -10032,7 +10032,7 @@
         },
         {
           "id": "government::1::https://cdn.occrp.org/projects/project-p/#/",
-          "name": "The Pegasus Project \\| OCCRP",
+          "name": "The Pegasus Project | OCCRP",
           "url": "https://cdn.occrp.org/projects/project-p/#/",
           "domain": "cdn.occrp.org",
           "note": null
@@ -10363,7 +10363,7 @@
     },
     {
       "id": "can-government",
-      "name": "\\[CAN\\] GOVERNMENT",
+      "name": "[CAN] GOVERNMENT",
       "tools": [
         {
           "id": "can-government::0::https://lobbycanada.gc.ca/app/secure/ocl/lrs/do/advSrch?lang=eng",
@@ -10444,7 +10444,7 @@
         },
         {
           "id": "can-government::11::https://novascotia.ca/psc/geds/",
-          "name": "Employee Contact Directory Search \\| novascotia.ca",
+          "name": "Employee Contact Directory Search | novascotia.ca",
           "url": "https://novascotia.ca/psc/geds/",
           "domain": "novascotia.ca",
           "note": null
@@ -10530,7 +10530,7 @@
     },
     {
       "id": "can-corporation",
-      "name": "\\[CAN\\] CORPORATION",
+      "name": "[CAN] CORPORATION",
       "tools": [
         {
           "id": "can-corporation::0::https://rjsc.novascotia.ca/",
@@ -10611,7 +10611,7 @@
         },
         {
           "id": "can-corporation::11::https://occ.ca/business-directory/",
-          "name": "Business Directory \\| OCC",
+          "name": "Business Directory | OCC",
           "url": "https://occ.ca/business-directory/",
           "domain": "occ.ca",
           "note": null
