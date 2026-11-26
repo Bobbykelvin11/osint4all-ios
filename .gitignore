@@ -1,0 +1,9 @@
+*.xcodeproj
+build/
+DerivedData/
+ipa/
+*.ipa
+*.xcarchive
+*.log
+.DS_Store
+OSINT4ALL/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png
