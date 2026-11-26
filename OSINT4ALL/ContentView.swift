@@ -6,6 +6,11 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
+            AskView(store: store, showAbout: $showAbout)
+                .tabItem {
+                    Label("Ask", systemImage: "sparkles")
+                }
+
             DirectoryTabView(store: store, showAbout: $showAbout)
                 .tabItem {
                     Label("Directory", systemImage: "square.grid.2x2.fill")
@@ -109,6 +114,7 @@ private struct DirectoryTabView: View {
                                 ToolRow(
                                     tool: match.tool,
                                     categoryBadge: match.categoryName,
+                                    matchReason: nil,
                                     store: store
                                 )
                             }
@@ -116,8 +122,8 @@ private struct DirectoryTabView: View {
                     }
                 }
             }
-            .navigationTitle("OSINT4ALL")
-            .searchable(text: $searchText, prompt: "Search \(store.totalToolCount) tools or domains...")
+            .navigationTitle("Directory")
+            .searchable(text: $searchText, prompt: "Filter \(store.totalToolCount) tools or domains...")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -151,7 +157,7 @@ private struct CategoryDetailView: View {
         List {
             Section("\(filteredTools.count) Tools") {
                 ForEach(filteredTools) { tool in
-                    ToolRow(tool: tool, categoryBadge: nil, store: store)
+                    ToolRow(tool: tool, categoryBadge: nil, matchReason: nil, store: store)
                 }
             }
         }
@@ -188,7 +194,7 @@ private struct FavoritesTabView: View {
                             .foregroundStyle(.secondary)
                         Text("No Favorites Yet")
                             .font(.headline)
-                        Text("Tap the star on any tool in the Directory to save it here for offline access.")
+                        Text("Tap the star on any tool in Ask or Directory to save it here for offline access.")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                             .multilineTextAlignment(.center)
@@ -202,6 +208,7 @@ private struct FavoritesTabView: View {
                                 ToolRow(
                                     tool: match.tool,
                                     categoryBadge: match.categoryName,
+                                    matchReason: nil,
                                     store: store
                                 )
                                 .swipeActions(edge: .trailing) {
@@ -231,9 +238,10 @@ private struct FavoritesTabView: View {
     }
 }
 
-private struct ToolRow: View {
+struct ToolRow: View {
     let tool: OSINTTool
     let categoryBadge: String?
+    let matchReason: String?
     @ObservedObject var store: DirectoryStore
 
     var body: some View {
@@ -259,6 +267,13 @@ private struct ToolRow: View {
                                 .foregroundStyle(.secondary)
                                 .lineLimit(1)
                         }
+                    }
+
+                    if let matchReason, !matchReason.isEmpty {
+                        Text(matchReason)
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
                     }
 
                     if let note = tool.note, !note.isEmpty {

@@ -44,12 +44,15 @@ final class DirectoryStore: ObservableObject {
     @Published private(set) var startMeURLString: String = "https://start.me/p/L1rEYQ/osint4all"
     @Published private(set) var mirrorURLString: String = "https://github.com/osint4all/osint4all.github.io"
     @Published var favoriteIDs: Set<String> = []
+    @Published var recentSearches: [String] = []
     @Published var safariItem: SafariItem?
 
     private let favoritesKey = "osint4all.favorites.v1"
+    private let recentSearchesKey = "osint4all.recentSearches.v1"
 
     init() {
         loadFavorites()
+        loadRecentSearches()
         loadBundledDirectory()
     }
 
@@ -75,6 +78,28 @@ final class DirectoryStore: ObservableObject {
 
     private func saveFavorites() {
         UserDefaults.standard.set(Array(favoriteIDs), forKey: favoritesKey)
+    }
+
+    private func loadRecentSearches() {
+        if let saved = UserDefaults.standard.stringArray(forKey: recentSearchesKey) {
+            recentSearches = saved
+        }
+    }
+
+    func addRecentSearch(_ query: String) {
+        let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        recentSearches.removeAll { $0.caseInsensitiveCompare(trimmed) == .orderedSame }
+        recentSearches.insert(trimmed, at: 0)
+        if recentSearches.count > 10 {
+            recentSearches = Array(recentSearches.prefix(10))
+        }
+        UserDefaults.standard.set(recentSearches, forKey: recentSearchesKey)
+    }
+
+    func clearRecentSearches() {
+        recentSearches = []
+        UserDefaults.standard.removeObject(forKey: recentSearchesKey)
     }
 
     func isFavorite(_ tool: OSINTTool) -> Bool {
